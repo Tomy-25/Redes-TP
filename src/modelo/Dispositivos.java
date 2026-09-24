@@ -41,14 +41,11 @@ public class Dispositivos {
 
 	@Override
 	public String toString() {
-		return 
-		"IP='" + ip + '\'' +
-        ", Nombre='" + nombre + '\'' +
-        ", Estado=" + (conectado ? "Activo" : "Inactivo") +
-        ", Tiempo=" + tiempoRespuesta + " ms" +
-        '}';
+		return "IP=" + ip
+				+ ", Nombre=" + nombre
+				+ ", Estado=" + (conectado ? "Activo" : "Inactivo")
+				+ ", Tiempo=" + (conectado ? tiempoRespuesta + " ms" : "-");
 	}
-
 
 
 	public Dispositivos(String ip, String nombre, boolean conectado, long tiempoRespuesta) {
